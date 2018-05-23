@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  config : {
+    apiKey: "AIzaSyAb6rTFCFFX2e-U5Mnn0ip0qGDke9eRVw4",
+    authDomain: "dvt-snowball.firebaseapp.com",
+    databaseURL: "https://dvt-snowball.firebaseio.com",
+    projectId: "dvt-snowball",
+    storageBucket: "dvt-snowball.appspot.com",
+    messagingSenderId: "251207193051"
+  }
 };
 
 /*
