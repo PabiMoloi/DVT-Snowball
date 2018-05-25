@@ -1,0 +1,42 @@
+.left-panel{
+    height:100vh;
+    float:left;
+    margin: 0%;
+    opacity: 0.7;
+}
+.left-panel-div{
+    opacity: 0.8;
+    background-color: white;
+    height: 33%;
+}
+.left-panel-h1{
+    color: #f7ba15;
+    margin-top: 35%;
+    margin-left:25%;
+    padding-top:10%;
+}
+.left-panel-h3{
+    color:#484848;
+    margin-left:25%;
+}
+.right-panel{
+    float: right;
+    height:100vh;
+    background-color: whitesmoke;
+}
+.right-panel-img-logo{
+    height: 335px;
+    width: 670px;
+    margin-left: 50px;
+    margin-top: 55px;
+}
+.right-panel-form{
+    width: 65%;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.right-panel-form-button{
+    background-color: #f7ba15;
+    width:15%;
+    color:white;
+}
