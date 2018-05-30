@@ -11,12 +11,14 @@ require('firebase/auth')
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import {environment} from '../environments/environment'
+import {environment} from '../environments/environment';
+import { AdminportalComponent } from './adminportal/adminportal.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    AdminportalComponent
   ],
   imports: [
     BrowserModule,
