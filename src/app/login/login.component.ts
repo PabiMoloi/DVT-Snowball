@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
   }
   onLoginButtonClick(){
     console.log("function called");
+    this.filledIn = true;
     console.log(this.loginForm.value);
     if (this.loginForm.invalid)
     {
