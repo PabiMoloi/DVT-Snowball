@@ -4,15 +4,21 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
 import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 import {AngularFireModule} from 'angularfire2'
 import {AngularFireDatabaseModule} from 'angularfire2/database'
+import { AngularFireAuthModule} from 'angularfire2/auth';
 import {auth} from 'firebase/app'
 import * as firebase from 'firebase/app'
 require('firebase/auth')
-
-
+import {RouterModule, Routes} from '@angular/router'
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import {environment} from '../environments/environment';
 import { AdminportalComponent } from './adminportal/adminportal.component'
+
+const appRoutes: Routes = [
+  { path: 'login', component: LoginComponent},
+  {path: 'snowball-portal', component: AdminportalComponent}
+ 
+];
 
 @NgModule({
   declarations: [
@@ -26,7 +32,11 @@ import { AdminportalComponent } from './adminportal/adminportal.component'
     ReactiveFormsModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.config),
-    AngularFireDatabaseModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    RouterModule.forRoot(
+      appRoutes
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
