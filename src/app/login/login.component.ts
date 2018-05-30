@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
-import {FormBuilder, FormGroup, Validators} from '@angular/forms'
-import { reject } from 'q';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {auth} from 'firebase/app';
+import { FirebaseApp, AngularFireModule } from 'angularfire2';
+import * as firebase from 'firebase/app'
+import { environment } from '../../environments/environment';
+require('firebase/auth')
 
 @Component({
   selector: 'app-login',
@@ -20,18 +24,30 @@ export class LoginComponent implements OnInit {
       loginEmail:['',[Validators.required, Validators.email]],
       loginPassword:['',Validators.required]
     });
+    firebase.initializeApp(environment.config);
   }
   get controller()
   {
     return this.loginForm.controls;
   }
   onLoginButtonClick(){
+    var emailAddress: string;
+    var password: string;
+    emailAddress = this.loginForm.controls.loginEmail.value;
+    password = this.loginForm.controls.loginPassword.value;
+    firebase.auth().signInWithEmailAndPassword(emailAddress,password)
+    .then( function(response)  {
+      console.log(response.user.uid);
+      
+    })
+    .catch(function(error){
+      console.log(error.message);
+    });
+
     console.log("function called");
     this.filledIn = true;
     console.log(this.loginForm.value);
-    if (this.loginForm.invalid)
-    {
-      return;
-    }
+    
+   
   }
 }
