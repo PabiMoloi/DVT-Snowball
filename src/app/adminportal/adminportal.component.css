@@ -38,3 +38,10 @@
     background-color:#F8F8F8;
     height: 100vh;
 }
+.portal{
+    height: 5%;
+}
+.portal-current-user{
+    float: right;
+
+}
