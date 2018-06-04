@@ -25,8 +25,8 @@
     color: #007fba;
 }
 .admin-portal-nav-img-logo{
-    height: 140px;
-    width:250px;
+    height: 175px;
+    width:200px;
 }
 .snowball-heading{
     color: #007fba;
@@ -44,4 +44,7 @@
 .portal-current-user{
     float: right;
 
+}
+.usersTable{
+    background-color: white;
 }

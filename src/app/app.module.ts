@@ -7,16 +7,18 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
 import { AngularFireAuthModule} from 'angularfire2/auth';
 import {auth} from 'firebase/app'
 import * as firebase from 'firebase/app'
-require('firebase/auth')
+//require('firebase/auth')
 import {RouterModule, Routes} from '@angular/router'
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import {environment} from '../environments/environment';
-import { AdminportalComponent } from './adminportal/adminportal.component'
+import { AdminportalComponent } from './adminportal/adminportal.component';
+import { UserListComponent } from './user-list/user-list.component'
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent},
-  {path: 'snowball-portal', component: AdminportalComponent}
+  {path: 'snowball-portal', component: AdminportalComponent},
+  { path: '', component: LoginComponent},
  
 ];
 
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    AdminportalComponent
+    AdminportalComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
