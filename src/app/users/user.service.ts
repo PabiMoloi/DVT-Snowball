@@ -18,12 +18,15 @@ export class UserService {
   }
 
   insertUser(user: User){
+    if(!this.userList){
+      this.userList = this.getUsers();
+    }
     this.userList.push({
       firstName: user.firstName,
       lastName: user.lastName,
       username: user.username,
       password: user.password,
-      activeProfile: user.activeProfile
+      activeProfile: true
     });
   }
 
