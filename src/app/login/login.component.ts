@@ -12,7 +12,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, public route: ActivatedRoute, public router: Router, private af: AngularFireAuth ) { }
+  constructor(private formBuilder: FormBuilder, public route: ActivatedRoute, public router: Router, private angularFireAuth: AngularFireAuth ) { }
 
   loginForm: FormGroup;
   filledIn = false;
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     const scope = this;
     emailAddress = this.loginForm.controls.loginEmail.value;
     password = this.loginForm.controls.loginPassword.value;
-    this.af.auth.signInWithEmailAndPassword(emailAddress,password)
+    this.angularFireAuth.auth.signInWithEmailAndPassword(emailAddress,password)
     .then( function(response)  {
       scope.router.navigate(['snowball-portal']);
     })
