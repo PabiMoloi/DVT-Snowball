@@ -40,7 +40,7 @@ export class UserService {
       lastName: user.lastName,
       username: user.username,
       password: user.password,
-      activeProfile: user.activeProfile
+      activeProfile: true
     });
   }
 

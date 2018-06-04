@@ -48,3 +48,10 @@
 .usersTable{
     background-color: white;
 }
+
+.addUserButton{
+    background-color: #007fba;
+}
+#formDiv{
+    visibility: hidden;
+}

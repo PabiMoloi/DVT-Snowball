@@ -12,4 +12,12 @@ export class AdminportalComponent implements OnInit {
   ngOnInit() {
   }
 
+  addUser(){
+    var x = document.getElementById("formDiv");
+    if (x.style.visibility === "hidden") {
+        x.style.visibility = "visible";
+    } else {
+        x.style.display = "hidden";
+    }
+  }
 }

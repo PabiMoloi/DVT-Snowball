@@ -16,7 +16,9 @@ export class UserComponent implements OnInit {
   }
 
   onRegisterClick(userForm: NgForm){
-    if(userForm.value.$key == null)
-    this.userService.insertUser(userForm.value);
+    if (userForm.value.$key == null)
+      this.userService.insertUser(userForm.value);
+    else
+      this.userService.updateUser(userForm.value);
   }
 }
