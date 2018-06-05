@@ -53,5 +53,5 @@
     background-color: #007fba;
 }
 #formDiv{
-    visibility: hidden;
+    display: none;
 }

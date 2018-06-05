@@ -26,8 +26,8 @@ export class UserListComponent implements OnInit {
     });
   }
 
-  onUpdate(user: User){
-    this.userService.currentUser = Object.assign({},user);
+  onSendResetPasswordEmailLink(username: string){
+    this.userService.resetUserPassword(username);
   }
 
   onDelete(key: string){

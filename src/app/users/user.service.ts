@@ -42,10 +42,20 @@ export class UserService {
       password: user.password,
       activeProfile: true
     });
+    console.log("update function called");
   }
 
   deleteUser($key: string){
     this.userList.remove($key);
+  }
+  resetUserPassword(username: string){
+    var auth = this.angularFireAuth.auth;
+
+auth.sendPasswordResetEmail(username).then(function() {
+  console.log("Email sent.") ;
+}).catch(function(error) {
+   console.log("An error happened.") ;
+});
   }
 }
 

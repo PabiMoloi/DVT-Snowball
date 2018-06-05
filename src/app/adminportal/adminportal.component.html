@@ -9,14 +9,13 @@
     <a href="#settings">Settings</a>
   </div>
   <div class="main">
-    <div class="portal">
-      <div class="portal-current-user"><i class="fa fa-user-o"></i>
-      </div>
       <div><h5> User Management</h5></div>
       <div class="usersTable">
         <app-user-list></app-user-list>
-        <button type="submit" class="btn btn-primary addUserButton" onclick="addUser()">Add User</button>
-        <div id="formDiv"><app-user></app-user></div>
+        <button type="submit" class="btn btn-primary addUserButton" (click)="addUserClick()">Add User</button>
+        <br/>
+        <br/>
+        <div id="formDiv"><app-user></app-user>
+        </div>
       </div>
     </div>
-  </div>
