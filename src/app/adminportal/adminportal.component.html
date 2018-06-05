@@ -9,13 +9,15 @@
     <a href="#settings">Settings</a>
   </div>
   <div class="main">
-      <div><h5> User Management</h5></div>
+      <div class="user-management-heading"><h4> User Management</h4></div>
+      <hr/>
       <div class="usersTable">
         <app-user-list></app-user-list>
         <button type="submit" class="btn btn-primary addUserButton" (click)="addUserClick()">Add User</button>
         <br/>
         <br/>
         <div id="formDiv"><app-user></app-user>
+          <br/>
         </div>
       </div>
     </div>

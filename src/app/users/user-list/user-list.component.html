@@ -1,8 +1,7 @@
-<h4 class="text-center">User List</h4><br/>
-<table class="table table-sm table-hover">
+<table class="table table-sm">
   <thead>
-    <tr>
-      <th>username</th>
+    <tr class="table-header-fontsize">
+      <th>Username</th>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Active</th>
@@ -10,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of userList">
+    <tr *ngFor="let user of userList" class="table-content-fontsize ">
         <td>{{user.username}}</td>
         <td>{{user.firstName}}</td>
         <td>{{user.lastName}}</td>
